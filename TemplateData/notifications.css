@@ -1,0 +1,162 @@
+.notifications {
+  z-index: 2000;
+}
+
+.notificationAnimation {
+  display: flex;
+  justify-content: center;
+}
+
+.notificationAnimation--animate {
+  animation: .5s notificationScale reverse;
+}
+
+.notification {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: -webkit-fill-available;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.80);;
+}
+
+.notification__content {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #000000;
+  border-radius: 20px;
+  background: #FFFFFF;
+  width: 335px;
+  padding: 20px;
+  position: relative;
+  animation: .5s notificationScale;
+}
+
+.notification__content > * + * {
+  margin-top: 16px;
+}
+
+.notification__contentTitle {
+  text-align: center;
+}
+
+.notification__contentDesc {
+  font-size: 13.6px;
+}
+
+.notMemberNotification::before {
+  content: "";
+  width: 227px;
+  height: 149px;
+  background: url(./notMember.png);
+  display: block;
+  position: absolute;
+  top: -136px;
+  left: 50px;
+}
+
+.topNotification {
+  display: flex;
+  width: 307px;
+  align-items: center;
+  padding: 10px 8px 10px 16px;
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  border-radius: 20px;
+  animation: .7s topNotification;
+}
+
+.topNotification > * + * {
+  margin-left: 9px;
+}
+
+.topNotification--long {
+  width: 361px;
+}
+
+.topNotificationanimation {
+  position: fixed;
+  top: 100px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+
+.topNotificationanimation--animate {
+  animation: .7s reverse topNotification;
+}
+
+.topNotification__text {
+  font-size: 14px;
+  flex: 1;
+  color: #353232;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.topNotification__warning, .topNotification__close {
+  min-width: 16px;
+  display: flex;
+  justify-content: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.topNotification__close {
+  cursor: pointer;
+}
+
+
+
+@keyframes notificationScale {
+  0% {
+    transform: scale(.01);
+  }
+
+  80% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes notificationScale {
+  0% {
+    transform: scale(.01);
+  }
+
+  80% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes topNotification {
+  0% {
+    transform: translateY(-200px);
+  }
+  80% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes topNotification {
+  0% {
+    transform: translateY(-200px);
+  }
+  80% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

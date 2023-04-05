@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>Ловлю на слове</title>
+    <link rel="apple-touch-icon" href="TemplateData/favicon.ico">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="TemplateData/styles.css">
+    <link rel="stylesheet" href="TemplateData/notifications.css">
+    <link rel="stylesheet" href="TemplateData/customCheckbox.css">
+</head>
+<body>
+
+<!-- REVMetrika -->
+<script type="text/javascript">
+    (function ()
+    {
+        var t = document.createElement("script");
+        t.type = "text/javascript";
+        t.async = !0;
+            t.src = 'https://revmetrica-devel.k8s.itrev.ru/rev.js';
+        document.head.appendChild(t)
+        window.REV = {REV_EVENTS : []}
+    })();
+</script>
+
+<!-- /REVMetrika -->
+
+<!-- SignIn Page -->
+
+  <div class="pageRoot" id="signin" style="display: none;">
+
+    <div class="contentWrapper contentWrapper--signin">
+      <div class="mainPage">
+        <div class="desktopImage"><img src="TemplateData/desktopInfo.png" alt="Desktop Info"></div>
+
+        <div class="firstStep">
+          <button class="button" id="firstStep">играть</button>
+          <div class="logos logos--desktop">
+            <div class="logos__item"><img src="TemplateData/sber.png" alt="sberbank"></div>
+            <div class="logos__item"><img src="TemplateData/revgames.png" alt="revgames"></div>
+          </div>
+        </div>
+
+        <div class="content secondStep">
+          <div class="contentWrapper__title">
+            <h2 class="mainTitle">Войти</h2>
+            <p class="mainDesc">Чтобы играть и получать призы, введи номер телефона и дату рождения </p>
+          </div>
+          <div class="signinForm">
+            <div class="inputField">
+              <label class="inputField__label tel" for="phone">Телефон</label>
+              <input class="inputField__input tel" type="phone" placeholder="+7 (000) 000 - 00 - 00" id="phone">
+            </div>
+            <div class="inputField">
+              <label class="inputField__label">Дата рождения</label>
+              <div class="inputField__date">
+                <div class="inputField__dateDay inputField__input custom-select">
+                  <select class="dayList" id="day">
+                    <option value="0">дд</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                </div>
+                <div class="inputField__dateMonth inputField__input custom-select">
+                  <select class="monthList" id="month">
+                    <option value="0">мм</option>
+                    <option value="1">Январь</option>
+                    <option value="2">Февраль</option>
+                    <option value="3">Март</option>
+                    <option value="4">Апрель</option>
+                    <option value="5">Май</option>
+                    <option value="6">Июнь</option>
+                    <option value="7">Июль</option>
+                    <option value="8">Август</option>
+                    <option value="9">Сентябрь</option>
+                    <option value="10">Октябрь</option>
+                    <option value="11">Ноябрь</option>
+                    <option value="12">Декабрь</option>
+                  </select>
+                </div>
+                <div class="inputField__dateYear inputField__input custom-select">
+                  <select class="yearsList" id="year">
+
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="button" id="signInButton">
+            Играть
+          </button>
+
+          <div class="logos logos--desktop">
+            <div class="logos__item"><img src="TemplateData/sber.png" alt="sberbank"></div>
+            <div class="logos__item"><img src="TemplateData/revgames.png" alt="revgames"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer">
+      <div class="info">
+        Предложение действительно для участников Программы «СберСпасибо» (далее - Программа) при условии участия в Акции
+        «Ловлю на слове». Все сроки указаны по московскому времени: общий срок Акции (включая срок получения Поощрений):
+        с 00:00:00 ч. 19.07.2022 г. по 23:59:59 ч. 01.09.2023 г. (включительно) (или) до момента исчерпания фонда Акции
+        (в зависимости от того какое из событий наступит раньше). Срок для регистрации в Акции: с 00:00:00 ч.
+        19.07.2022г. по 23:59:59 ч. 31.08.2023г. (включительно)*. Срок совершения активных действий с использованием
+        интерфейса Сайта Акции - с момента регистрации в Акции и до 23:59:59ч. 31.08.2023 г. (включительно)*. <br />
+        Акция проводится Организатором АО «ЦПЛ» (ОГРН: 1117746689840, ИНН: 7702770003, место нахождения: 121170, г.
+        Москва, вн.тер.г. муниципальный округ Досрогомилово, ул. Поклонная, д. 3, этаж 3/помещ.120) при технической
+        поддержке Партнера Программы – ООО «Рев Геймс» (ОГРН 1215900018245, ИНН 5905069657, место нахождения: 614066,
+        Пермский край, г.о. Пермский, г. Пермь, ул. Стахановская, д. 54, офис 223, ком. 25). Фонд Акции ограничен.
+        Сведения о правилах проведения Акции, количестве и размере Поощрений, сроках, месте, порядке их получения,
+        условиях и ограничениях – в <a class="link" target="_blank"
+          href="https://docs.google.com/gview?embedded=true&url=https://storage.yandexcloud.net/sber-static/shareRules.pdf">Правилах
+          Акции</a>. Акция проводится на базе Программы. Организатор Программы - ПАО Сбербанк (Генеральная лицензия
+        Банка России на осуществление банковских операций № 1481 от 11.08.2015). Программа действует с 12.11.11 и не
+        ограничена сроком действия. С подробной информацией о Правилах проведения Программы, способах регистрации в
+        Программе, условиях Начисления и Списания Бонусов, ограничениях можно ознакомиться на сайте: spasibosberbank.ru.
+        Организатор Программы/Акции вправе в одностороннем порядке вносить изменения в Правила Программы/Акции, в т.ч. в
+        части сроков ее проведения, количества, сроков и иных условий получения Поощрений. Участие в Акции
+        предоставляется без внесения абонентской платы и без каких-либо иных обязательных платежей. Акция не является
+        игрой, основанной на риске. <br />
+        Написанные с большой буквы термины, употребляются в значении, определенном в Правилах Программы. Сведения
+        действительны на 19.07.2022 г. <br /><br />
+
+        *и (или) до момента исчерпания фонда Акции (в зависимости от того какое из событий наступит раньше)
+      </div>
+    </div>
+  </div>
+
+  <!-- // SignIn Page -->
+
+  <!-- Accept Rules Page -->
+
+  <div class="pageRoot" id="acceptform" style="display: none;">
+    <div class="contentWrapper">
+      <div class="contentWrapper__title contentWrapper__title--accept">
+        <div class="accept__image">
+          <img src="TemplateData/auth.png" alt="auth hello">
+        </div>
+        <h2 class="mainTitle">Авторизация</h2>
+      </div>
+      <div class="inputCheckBox">
+        <label class="container"><a href="https://docs.google.com/gview?embedded=true&url=https://storage.yandexcloud.net/sber-static/sharePersonal.pdf" target="_blank">Согласие на обработку персональных данных</a>
+          <input type="checkbox" id="terms">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"><a href="https://docs.google.com/gview?embedded=true&url=https://storage.yandexcloud.net/sber-static/shareRules.pdf" target="_blank">Согласие с Правилами Акции</a>
+          <input type="checkbox" id="regulations">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <button class="button" id="register">
+        Играть
+      </button>
+
+      <div class="logos logos--desktop logos--acceptForm">
+        <div class="logos__item"><img src="TemplateData/sber.png" alt="sberbank"></div>
+        <div class="logos__item"><img src="TemplateData/revgames.png" alt="revgames"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+
+      <div class="info">
+        Предложение действительно для участников Программы «СберСпасибо» (далее - Программа) при условии участия в Акции
+        «Ловлю на слове». Все сроки указаны по московскому времени: общий срок Акции (включая срок получения Поощрений):
+        с 00:00:00 ч. 19.07.2022 г. по 23:59:59 ч. 01.09.2023 г. (включительно) (или) до момента исчерпания фонда Акции
+        (в зависимости от того какое из событий наступит раньше). Срок для регистрации в Акции: с 00:00:00 ч.
+        19.07.2022г. по 23:59:59 ч. 31.08.2023г. (включительно)*. Срок совершения активных действий с использованием
+        интерфейса Сайта Акции - с момента регистрации в Акции и до 23:59:59ч. 31.08.2023 г. (включительно)*. <br />
+        Акция проводится Организатором АО «ЦПЛ» (ОГРН: 1117746689840, ИНН: 7702770003, место нахождения: 121170, г.
+        Москва, вн.тер.г. муниципальный округ Досрогомилово, ул. Поклонная, д. 3, этаж 3/помещ.120) при технической
+        поддержке Партнера Программы – ООО «Рев Геймс» (ОГРН 1215900018245, ИНН 5905069657, место нахождения: 614066,
+        Пермский край, г.о. Пермский, г. Пермь, ул. Стахановская, д. 54, офис 223, ком. 25). Фонд Акции ограничен.
+        Сведения о правилах проведения Акции, количестве и размере Поощрений, сроках, месте, порядке их получения,
+        условиях и ограничениях – в <a class="link" target="_blank"
+          href="https://docs.google.com/gview?embedded=true&url=https://storage.yandexcloud.net/sber-static/shareRules.pdf">Правилах
+          Акции</a>. Акция проводится на базе Программы. Организатор Программы - ПАО Сбербанк (Генеральная лицензия
+        Банка России на осуществление банковских операций № 1481 от 11.08.2015). Программа действует с 12.11.11 и не
+        ограничена сроком действия. С подробной информацией о Правилах проведения Программы, способах регистрации в
+        Программе, условиях Начисления и Списания Бонусов, ограничениях можно ознакомиться на сайте: spasibosberbank.ru.
+        Организатор Программы/Акции вправе в одностороннем порядке вносить изменения в Правила Программы/Акции, в т.ч. в
+        части сроков ее проведения, количества, сроков и иных условий получения Поощрений. Участие в Акции
+        предоставляется без внесения абонентской платы и без каких-либо иных обязательных платежей. Акция не является
+        игрой, основанной на риске. <br />
+        Написанные с большой буквы термины, употребляются в значении, определенном в Правилах Программы. Сведения
+        действительны на 19.07.2022 г. <br /><br />
+
+        *и (или) до момента исчерпания фонда Акции (в зависимости от того какое из событий наступит раньше)
+      </div>
+    </div>
+  </div>
+
+  <!-- // Accept Rules Page -->
+
+  <!-- Sms Code Page -->
+
+  <div class="pageRoot" id="smscode" style="display: none;">
+    <div class="contentWrapper">
+      <div class="contentWrapper__title contentWrapper__title--code">
+        <h2 class="mainTitle">Введите<br />проверочный код</h2>
+        <p class="mainDesc" id="smsPhoneNumber"></p>
+      </div>
+
+      <div class="inputField__sms">
+        <input type="text" class="inputField__input inputField__smsInput" id="sms1" inputmode="numeric">
+        <input type="text" class="inputField__input inputField__smsInput" id="sms2" inputmode="numeric">
+        <input type="text" class="inputField__input inputField__smsInput" id="sms3" inputmode="numeric">
+        <input type="text" class="inputField__input inputField__smsInput" id="sms4" inputmode="numeric">
+        <input type="text" class="inputField__input inputField__smsInput" id="sms5" inputmode="numeric">
+        <input type="text" class="inputField__input inputField__smsInput" id="sms6" inputmode="numeric">
+      </div>
+
+      <div class="retrySMS" id="retrySMS">Отправить код по SMS повторно</div>
+      <div class="logos logos--desktop">
+        <div class="logos__item"><img src="TemplateData/sber.png" alt="sberbank"></div>
+        <div class="logos__item"><img src="TemplateData/revgames.png" alt="revgames"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+
+      <div class="info">
+        Предложение действительно для участников Программы «СберСпасибо» (далее - Программа) при условии участия в Акции
+        «Ловлю на слове». Все сроки указаны по московскому времени: общий срок Акции (включая срок получения Поощрений):
+        с 00:00:00 ч. 19.07.2022 г. по 23:59:59 ч. 01.09.2023 г. (включительно) (или) до момента исчерпания фонда Акции
+        (в зависимости от того какое из событий наступит раньше). Срок для регистрации в Акции: с 00:00:00 ч.
+        19.07.2022г. по 23:59:59 ч. 31.08.2023г. (включительно)*. Срок совершения активных действий с использованием
+        интерфейса Сайта Акции - с момента регистрации в Акции и до 23:59:59ч. 31.08.2023 г. (включительно)*. <br />
+        Акция проводится Организатором АО «ЦПЛ» (ОГРН: 1117746689840, ИНН: 7702770003, место нахождения: 121170, г.
+        Москва, вн.тер.г. муниципальный округ Досрогомилово, ул. Поклонная, д. 3, этаж 3/помещ.120) при технической
+        поддержке Партнера Программы – ООО «Рев Геймс» (ОГРН 1215900018245, ИНН 5905069657, место нахождения: 614066,
+        Пермский край, г.о. Пермский, г. Пермь, ул. Стахановская, д. 54, офис 223, ком. 25). Фонд Акции ограничен.
+        Сведения о правилах проведения Акции, количестве и размере Поощрений, сроках, месте, порядке их получения,
+        условиях и ограничениях – в <a class="link" target="_blank"
+          href="https://docs.google.com/gview?embedded=true&url=https://storage.yandexcloud.net/sber-static/shareRules.pdf">Правилах
+          Акции</a>. Акция проводится на базе Программы. Организатор Программы - ПАО Сбербанк (Генеральная лицензия
+        Банка России на осуществление банковских операций № 1481 от 11.08.2015). Программа действует с 12.11.11 и не
+        ограничена сроком действия. С подробной информацией о Правилах проведения Программы, способах регистрации в
+        Программе, условиях Начисления и Списания Бонусов, ограничениях можно ознакомиться на сайте: spasibosberbank.ru.
+        Организатор Программы/Акции вправе в одностороннем порядке вносить изменения в Правила Программы/Акции, в т.ч. в
+        части сроков ее проведения, количества, сроков и иных условий получения Поощрений. Участие в Акции
+        предоставляется без внесения абонентской платы и без каких-либо иных обязательных платежей. Акция не является
+        игрой, основанной на риске. <br />
+        Написанные с большой буквы термины, употребляются в значении, определенном в Правилах Программы. Сведения
+        действительны на 19.07.2022 г. <br /><br />
+
+        *и (или) до момента исчерпания фонда Акции (в зависимости от того какое из событий наступит раньше)
+      </div>
+    </div>
+  </div>
+
+  <!-- // Sms Code Page -->
+
+  <div id="game" style="display: none; height: -webkit-fill-available;">
+    <div id="unity-container">
+      <canvas id="unity-canvas"></canvas>
+    </div>
+
+    <div id="loading-cover" style="display:none;">
+      <div class="contentWrapper">
+        <div id="unity-logo"><img alt="Logo" src="TemplateData/NewLogo5=game.png"></div>
+        <div class="spinner"></div>
+        <label id="progress"></label>
+        <div id="logos">
+          <img alt="Logo" src="TemplateData/logo=sber.png">
+          <div></div>
+          <img alt="Logo" src="TemplateData/logo=revgames2.png">
+        </div>
+      </div>
+    </div>
+
+    <div id="not-supported" class="notSupported" style="display:none;">
+      <div class="contentWrapper">
+        <h2>Ваш браузер<br />не поддерживает<br />технологию webgl</h2>
+        <p>Пожалуйста, обновите браузер или версию<br />ОС до последней версии</p>
+        <div><img alt="Logo" src="TemplateData/not-supported.png"></div>
+      </div>
+    </div>
+
+    <div id="not-supported-wasm" class="notSupported" style="display:none;">
+      <div class="contentWrapper">
+        <h2>Ваш браузер<br />не поддерживает<br />технологию WebAssembly</h2>
+        <p>Пожалуйста, обновите браузер или версию<br />ОС до последней версии</p>
+        <div><img alt="Logo" src="TemplateData/not-supported.png"></div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Notifications -->
+
+  <div class="notifications">
+
+
+  </div>
+
+  <!-- // Notifications -->
+  <script type="text/javascript">
+    window.logym = (evName) => {
+      console.log(evName);
+    }
+  </script>
+  
+  <script type="text/javascript">
+    const start = Date.now();
+    
+
+    function log_event(evName, data, type, onlyRev) {
+        
+        if (!onlyRev) {
+            console.log(evName);
+        }
+
+        if (REV.logEvent)
+            REV.logEvent(evName, data, type);
+        else
+            REV.REV_EVENTS.push({name: evName, data: data, type: type})
+    }
+
+    let oldAlert =  window.alert;
+    let alertMsg = '';
+    window.alert = function(msg)
+    {
+        alertMsg = msg;
+        console.log(msg)
+    }
+
+    window.addEventListener("error", (event) => {
+
+        if (REV.logEvent)
+            REV.logEvent(event.error.message, event.error.stack, 'error');
+        else
+            REV.REV_EVENTS.push({name: event.error.message, data: event.error.stack, type: 'error'})
+
+        if (alertMsg)
+        {
+            oldAlert(alertMsg);
+            alertMsg = '';
+        }
+    });
+    
+    const container = document.querySelector("#unity-container");
+    const canvas = document.querySelector("#unity-canvas");
+    const loadingCover = document.querySelector("#loading-cover");
+    const spinner = document.querySelector('.spinner');
+    const progressText = document.querySelector('#progress');
+    const notSupported = document.querySelector('#not-supported');
+    const notSupportedWasm = document.querySelector('#not-supported-wasm');
+
+    const texts = [
+        "Гладим СберКота...",
+        "Перелистываем словарь...",
+        "Считаем буквы...",
+        "Загружаем красоту...",
+        "Читаем книжки...",
+        "Прибираемся в магазине...",
+        "Подготавливаем ачивки...",
+        "Упаковываем призы...",
+        "Загружаем звуки..."
+    ];
+
+    function uuidv4() {
+
+        let pFrontId = new URLSearchParams(location.search).get("frontId");
+        if (pFrontId)
+            return pFrontId;
+        
+        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+            (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+        );
+    }
+
+    window.REV.FRONT_ID = window.FRONT_ID = uuidv4();
+        window.REV.GAME_ID2 = 123456;
+    
+    function getLoaderText() {
+        const rand = Math.floor(Math.random() * texts.length);
+        return texts[rand];
+    }
+
+    progressText.innerHTML = getLoaderText();
+    let timerId = setInterval(() => progressText.innerHTML = getLoaderText(), 3000);
+
+    let buildUrl = "Build";
+    let streamingAssetsUrl = "StreamingAssets";
+
+    let fileName = 'SberWordle_dev.wasm';
+    let hash = fileName.replace('.wasm.unityweb', '')
+    
+
+    window.REV.VERSION = hash;
+
+    const loaderUrl = buildUrl + "/SberWordle_dev.loader.js";
+
+    let dataFile = "/SberWordle_dev.data";
+    
+
+    let c = document.createElement("canvas");
+    let gl = c.getContext("webgl");
+    let gl2 = c.getContext("webgl2");
+    if ((gl && gl.getExtension('WEBGL_compressed_texture_astc')) || 
+        (gl2 && gl2.getExtension('WEBGL_compressed_texture_astc'))) {
+        dataFile = dataFile.replace('.data', '_mobile.data');
+        streamingAssetsUrl += "Mobile";
+    }
+
+    const config = {
+        cacheControl: function (url) {
+            if (url.match(/\.data/) || url.match(/\.bundle/) || url.match(/\.dat/)) {
+                return "must-revalidate";
+            }
+            if (url.match(/\.mp4/) || url.match(/\.custom/)) {
+                return "immutable";
+            }
+            return "no-store";
+        },
+        dataUrl: buildUrl + dataFile,
+        frameworkUrl: buildUrl + "/SberWordle_dev.framework.js",
+        codeUrl: buildUrl + "/SberWordle_dev.wasm",
+        streamingAssetsUrl: streamingAssetsUrl,
+        companyName: "rev.games",
+        productName: "SberWordle",
+        productVersion: "1.6.285"
+    };
+
+
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        const meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+
+        addEventListener("load", function () {
+            canvas.style.width = window.innerWidth + 'px';
+            canvas.style.height = window.innerHeight + 'px';
+        });
+        addEventListener("resize", function () {
+            canvas.style.width = window.innerWidth + 'px';
+            canvas.style.height = window.innerHeight + 'px';
+        });
+
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+    }
+
+    loadingCover.style.display = "";
+    
+
+    
+    window.loadUnity = () => {
+      const script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+          createUnityInstance(canvas, config, (progress) => {
+              // progressText.innerHTML = `Загрузка ${(100 * progress).toFixed(0)}%`;
+          }).then((instance) => {
+              window.UNITY = instance
+              loadingCover.style.display = "none";
+              log_event('Launch_end');
+
+              clearInterval(timerId);
+          }).catch((e) => {
+              clearInterval(timerId);
+              log_event('launch_exception', e.toString(), 'error', true);
+              
+              if (e.toString().toLowerCase().indexOf('both async and sync fetching of the wasm failed') > -1)
+              {
+                  notSupported.innerHTML = '<div class="contentWrapper">' +
+                      '        <h2>Произошла проблема при загрузке игры</h2>' +
+                      '        <p>Пожалуйста, перезапустите игру</p>' +
+                      '        <div><img alt="Logo" src="TemplateData/not-supported.png"></div>' +
+                      '    </div>';
+                  notSupported.style.display = "flex";
+              }
+              else {
+                  const gl = canvas.getContext('webgl2');
+                  if (!gl)
+                      notSupported.style.display = "flex";
+                  else {
+
+                      const wasmSupported = (() => {
+                          try {
+                              if (typeof WebAssembly === "object"
+                                  && typeof WebAssembly.instantiate === "function") {
+                                  const module = new WebAssembly.Module(Uint8Array.of(0x0, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00));
+                                  if (module instanceof WebAssembly.Module)
+                                      return new WebAssembly.Instance(module) instanceof WebAssembly.Instance;
+                              }
+                          } catch (e) {
+                          }
+                          return false;
+                      })();
+
+                      if (!wasmSupported)
+                          notSupportedWasm.style.display = "flex";
+                  }
+              }
+              
+              
+              container.style.display = "none";
+              loadingCover.style.display = "none";
+          });
+      };
+      document.body.appendChild(script);
+      log_event('Launch_start');
+    }
+    
+</script>
+<script src="TemplateData/script.js" type="text/javascript"></script>
+
+</body>
+
+</html>

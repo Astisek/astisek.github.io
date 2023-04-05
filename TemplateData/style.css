@@ -1,0 +1,55 @@
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+html, body {height: 100%;}
+/* @font-face {  font-family: "SB Sans"; font-weight: 700; src: url('./SBSansDisplay-Bold.woff') format('woff')  }
+@font-face {  font-family: "SB Sans"; font-weight: 400; src: url('./SBSansDisplay-Regular.ttf') format('truetype')  }
+@font-face {  font-family: "SB Sans"; font-weight: 600; src: url('./SBSansDisplay-SemiBold.woff') format('woff')  } */
+@font-face {  font-family: "SB Sans"; font-weight: 700; src: url('./sbsans-bold.woff2') format('woff2')  }
+@font-face {  font-family: "SB Sans"; font-weight: 400; src: url('./sbsans-regular.woff2') format('woff2')  }
+@font-face {  font-family: "SB Sans"; font-weight: 600; src: url('./sbsans-semibold.woff2') format('woff2')  }
+canvas {display: block;}
+@font-face {  font-family: "SB Sans Display";url('TemplateData/SBSans') format('woff')  }
+body {margin: 0;background: url('pattern.png') repeat center #FFD361;font-family: "SB Sans Display", sans-serif; background-size: 120px 120px;}
+body > div:last-of-type:not([id]):not(.inputWrapper) {height: 0 !important;position: absolute !important;top: -50px;}
+#unity-container {width: 100%;height: 100%;}
+#unity-canvas {width: 100%;height: 100%;}
+#loading-cover {position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;}
+.contentWrapper {flex: 1 1 auto;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+#unity-logo {text-align: center;margin-top: 0;}
+#unity-logo img {max-width: 60%;}
+#logos {text-align: center;margin-top: 50px;}
+#logos img {max-width: 35%;}
+#logos div {display: inline; margin: 15px;}
+#unity-progress-bar-empty {width: 80%;height: 24px;margin: 10px 20px 20px 10px;text-align: left;padding: 2px;background: white;border-radius: 20px;}
+#unity-progress-bar-full {width: 0%;height: 100%;background: #3AD043;border-radius: 24px;}
+.spinner, .spinner:after {border-radius: 50%;width: 5em;height: 5em;}
+.spinner {margin-top: 40px;position: relative;text-indent: -9999em;background: url("preloader=black.png") no-repeat center;transform: translateZ(0);animation: spinner-spin 1.1s infinite linear;}
+@keyframes spinner-spin { 0% {transform: rotate(0deg);} 100% {transform: rotate(360deg);} }
+
+#not-supported-wasm,
+#not-supported {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  height: -webkit-fill-available; 
+}
+
+#not-supported-wasm p,
+#not-supported p {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  font-family: 'SB Sans';
+}
+
+#not-supported-wasm h2,
+#not-supported h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  font-family: 'SB Sans';
+  text-align: center;
+}
