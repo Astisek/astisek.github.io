@@ -783,11 +783,12 @@ const smsPageStart = () => {
 
   logOpenForm('SignInWebSmsForm(Clone)');
   logMetrica('EnterCode');
-  setTimeout(() => {
+  // setTimeout(() => {
     const sms = document.getElementById('sms1')
+    sms.select()
     sms.focus()
     sms.setSelectionRange(0, 0)
-  }, 500)
+  // }, 500)
 
 };
 const smsPageEnd = () => {

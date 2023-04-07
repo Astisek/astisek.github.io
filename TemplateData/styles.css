@@ -384,7 +384,7 @@ a {
   height: 100%;
   gap: 20px;
   position: relative;
-  animation: .5s rotateAnim forwards;
+  /* animation: .5s rotateAnim forwards; */
   transform-origin: center bottom;
 }
 
@@ -418,15 +418,12 @@ a {
 
 .firstStep {
   display: none;
+  width: 294px;
 }
 
 .secondStep {
   display: flex;
   position: relative;
-}
-
-.firstStep {
-  width: 100%;
 }
 
 .accept__image {
